@@ -1,0 +1,32 @@
+/* Simple clean CSS */
+body { font-family: Arial, Helvetica, sans-serif; background:#f4f6f8; margin:0; color:#222;}
+.app { min-height:100vh; display:flex; align-items:stretch; }
+.dashboard { display:flex; width:100%; }
+.menu { width:220px; background:#0b5578; color:#fff; padding:16px; display:flex; flex-direction:column; }
+.menu h1 { font-size:18px; margin:0 0 12px 0; }
+.menu nav button { display:block; width:100%; margin:6px 0; padding:8px; background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.1); border-radius:6px; cursor:pointer; text-align:left; }
+.menu .menu-bottom { margin-top:auto; }
+.menu .danger { background:#c44; color:#fff; border:none; padding:8px; border-radius:6px; cursor:pointer; }
+
+.content { flex:1; padding:20px; }
+
+.card { background:#fff; padding:12px; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:12px; }
+.form { display:flex; flex-direction:column; gap:8px; }
+.form-inline { display:flex; gap:8px; align-items:center; }
+.form-inline input { padding:6px; border:1px solid #ccc; border-radius:4px; }
+.form-inline button { padding:8px 12px; border:none; background:#0b5578; color:#fff; border-radius:6px; cursor:pointer; }
+
+.login-page { display:flex; height:100vh; justify-content:center; align-items:center; }
+.login-page .card { width:320px; }
+.error { color:#a33; margin-top:6px; }
+
+.table { width:100%; border-collapse:collapse; }
+.table th, .table td { padding:8px; border-bottom:1px solid #eee; text-align:left; }
+.table.small th, .table.small td { padding:6px; font-size:13px; }
+.actions button { margin-right:6px; }
+
+.toolbar { display:flex; justify-content:space-between; align-items:center; }
+.toolbar input { padding:6px; border:1px solid #ccc; border-radius:6px; }
+.totals { font-size:14px; }
+
+.hint { font-size:12px; color:#666; margin-top:8px; }
