@@ -1,4 +1,4 @@
-/* Simple clean CSS */
+
 body { font-family: Arial, Helvetica, sans-serif; background:#f4f6f8; margin:0; color:#222;}
 .app { min-height:100vh; display:flex; align-items:stretch; }
 .dashboard { display:flex; width:100%; }

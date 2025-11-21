@@ -1,12 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { getBooks, getMovements } from '../utils/storage';
 
-/*
- Reports include:
- - Grouping (by genre)
- - Pivot-like (count of books per author)
- - Totals and simple calculations
-*/
 export default function Reports(){
   const [books, setBooks] = useState([]);
   const [moves, setMoves] = useState([]);

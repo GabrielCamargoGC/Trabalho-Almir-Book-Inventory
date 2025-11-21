@@ -1,17 +1,14 @@
-/*
- Utilities to interact with localStorage
-*/
+
 const BOOKS_KEY = 'books';
-const AUTHORS_KEY = 'authors';      // NOVO
-const CAT_KEY = 'categories';       // JÁ EXISTIA, AGORA VAMOS USAR
+const CAT_KEY = 'categories';       
 const MOVES_KEY = 'movements';
 const USER_KEY = 'currentUser';
 
-// Usuários Hardcoded (Simulação)
+// Usuários 
 const USERS = [{ username: 'admin', password: 'password', role: 'admin' }];
 
 export function seedIfEmpty() {
-  // 1. Seed Livros
+  //Livros
   if (!localStorage.getItem(BOOKS_KEY)) {
     const sample = [
       { id: 1, title: 'Clean Code', author: 'Robert C. Martin', genre: 'Programming', price: 30, quantity: 5 },
@@ -21,7 +18,7 @@ export function seedIfEmpty() {
     localStorage.setItem(BOOKS_KEY, JSON.stringify(sample));
   }
 
-  // 2. Seed Autores (NOVO - Para cumprir CRUD 2)
+  //Autores 
   if (!localStorage.getItem(AUTHORS_KEY)) {
     const authors = [
       { id: 1, name: 'Robert C. Martin', nationality: 'Americano' },
@@ -31,7 +28,7 @@ export function seedIfEmpty() {
     localStorage.setItem(AUTHORS_KEY, JSON.stringify(authors));
   }
 
-  // 3. Seed Categorias (NOVO - Para cumprir CRUD 3)
+  //Categorias
   if (!localStorage.getItem(CAT_KEY)) {
     const cats = [
       { id: 1, name: 'Programming', desc: 'Livros técnicos de TI' },
@@ -40,13 +37,13 @@ export function seedIfEmpty() {
     localStorage.setItem(CAT_KEY, JSON.stringify(cats));
   }
 
-  // 4. Seed Movimentações
+  //Movimentações
   if (!localStorage.getItem(MOVES_KEY)) {
     localStorage.setItem(MOVES_KEY, JSON.stringify([]));
   }
 }
 
-// --- LIVROS ---
+//LIVROS 
 export function getBooks() {
   return JSON.parse(localStorage.getItem(BOOKS_KEY) || '[]');
 }
@@ -54,7 +51,7 @@ export function saveBooks(books) {
   localStorage.setItem(BOOKS_KEY, JSON.stringify(books));
 }
 
-// --- AUTORES (NOVO) ---
+//AUTORES
 export function getAuthors() {
   return JSON.parse(localStorage.getItem(AUTHORS_KEY) || '[]');
 }
@@ -62,7 +59,7 @@ export function saveAuthors(authors) {
   localStorage.setItem(AUTHORS_KEY, JSON.stringify(authors));
 }
 
-// --- CATEGORIAS (NOVO) ---
+//CATEGORIAS
 export function getCategories() {
   return JSON.parse(localStorage.getItem(CAT_KEY) || '[]');
 }
@@ -70,7 +67,7 @@ export function saveCategories(cats) {
   localStorage.setItem(CAT_KEY, JSON.stringify(cats));
 }
 
-// --- MOVIMENTAÇÕES ---
+//MOVIMENTAÇÕES
 export function getMovements() {
   return JSON.parse(localStorage.getItem(MOVES_KEY) || '[]');
 }
@@ -78,7 +75,7 @@ export function saveMovements(m) {
   localStorage.setItem(MOVES_KEY, JSON.stringify(m));
 }
 
-// --- AUTH ---
+//AUTH
 export function login(username, password) {
   const found = USERS.find(u => u.username === username && u.password === password);
   if (found) {

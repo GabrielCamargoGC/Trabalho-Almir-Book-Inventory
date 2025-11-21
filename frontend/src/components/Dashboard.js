@@ -3,15 +3,14 @@ import { logout, getCurrentUser } from '../utils/storage';
 import Books from './Books';
 import Movements from './Movements';
 import Reports from './Reports';
-// Importando as novas telas
 import Authors from './Authors';
 import Categories from './Categories';
-import Users from './Users'; // Se o arquivo Users.js não estiver pronto, comente essa linha
+import Users from './Users'; 
 
 export default function Dashboard({onLogout}) {
   const [view, setView] = useState('books');
   
-  // Pegamos o usuário para saber se é admin
+  //saber se é admin
   const user = getCurrentUser();
 
   function doLogout() {
@@ -26,16 +25,16 @@ export default function Dashboard({onLogout}) {
         <nav>
           <button onClick={()=>setView('books')} className={view==='books'?'active':''}>Livros</button>
           
-          {/* NOVOS BOTÕES (CRUDs Extras) */}
+          {}
           <button onClick={()=>setView('authors')} className={view==='authors'?'active':''}>Autores</button>
           <button onClick={()=>setView('categories')} className={view==='categories'?'active':''}>Categorias</button>
           
-          {/* Botão de Usuários (Apenas para Admin) - Autorização! */}
+          {}
           {user && user.role === 'admin' && (
              <button onClick={()=>setView('users')} className={view==='users'?'active':''}>Usuários</button>
           )}
 
-          <hr /> {/* Separador visual */}
+          <hr /> {}
 
           <button onClick={()=>setView('movements')} className={view==='movements'?'active':''}>Movimentações</button>
           <button onClick={()=>setView('reports')} className={view==='reports'?'active':''}>Relatórios</button>

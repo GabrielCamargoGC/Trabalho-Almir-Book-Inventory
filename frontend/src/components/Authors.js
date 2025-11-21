@@ -6,7 +6,7 @@ export default function Authors() {
   const [form, setForm] = useState({ id: null, name: '', nationality: '' });
   const [isEditing, setIsEditing] = useState(false);
 
-  // Carregar dados ao abrir
+  //Carregar dados ao abrir
   useEffect(() => {
     setAuthors(getAuthors());
   }, []);
@@ -17,11 +17,11 @@ export default function Authors() {
 
     const all = getAuthors();
     if (isEditing) {
-      // Atualizar existente
+      //Atualizar existente
       const idx = all.findIndex(a => a.id === form.id);
       all[idx] = form;
     } else {
-      // Criar novo
+      //Criar novo
       const newAuthor = { ...form, id: Date.now() };
       all.push(newAuthor);
     }
