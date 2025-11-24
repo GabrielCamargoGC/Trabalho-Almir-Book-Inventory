@@ -69,7 +69,7 @@ export default function Categories() {
               <tr key={c.id}>
                 <td>{c.name}</td>
                 <td>{c.desc}</td>
-                <td>
+                <td className="actions">
                   <button onClick={() => handleEdit(c)}>Editar</button>
                   <button onClick={() => handleDelete(c.id)}>Excluir</button>
                 </td>

@@ -3,6 +3,7 @@ const BOOKS_KEY = 'books';
 const CAT_KEY = 'categories';       
 const MOVES_KEY = 'movements';
 const USER_KEY = 'currentUser';
+const AUTHORS_KEY = 'authors';
 
 // Usuários 
 const USERS = [{ username: 'admin', password: 'password', role: 'admin' }];
@@ -19,7 +20,7 @@ export function seedIfEmpty() {
   }
 
   //Autores 
-  if (!localStorage.getItem(AUTHORS_KEY)) {
+  if(!localStorage.getItem(AUTHORS_KEY)) {
     const authors = [
       { id: 1, name: 'Robert C. Martin', nationality: 'Americano' },
       { id: 2, name: 'Andy Hunt', nationality: 'Americano' },

@@ -14,6 +14,7 @@ export default function Login({onLogin}) {
   }
 
   return (
+    <div className='fundo-login'>
     <div className='login-page'>
       <form className='card form' onSubmit={handleSubmit}>
         <h2>Login</h2>
@@ -25,6 +26,7 @@ export default function Login({onLogin}) {
         <button type='submit'>Entrar</button>
         <div className='hint'>Use <strong>admin</strong> / <strong>password</strong></div>
       </form>
+    </div>
     </div>
   );
 }

@@ -73,7 +73,7 @@ export default function Authors() {
               <tr key={a.id}>
                 <td>{a.name}</td>
                 <td>{a.nationality}</td>
-                <td>
+                <td className="actions">
                   <button onClick={() => handleEdit(a)}>Editar</button>
                   <button onClick={() => handleDelete(a.id)}>Excluir</button>
                 </td>
